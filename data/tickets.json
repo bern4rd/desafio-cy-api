@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "userId": 1,
+      "description": "My internet is not working.",
+      "status": "Open",
+      "createdAt": "2025-03-11T14:30:00Z"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "description": "The printer is not printing.",
+      "status": "In Progress",
+      "createdAt": "2025-03-11T15:10:00Z"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "description": "I can't log into my email account.",
+      "status": "Closed",
+      "createdAt": "2025-03-11T16:20:00Z"
+    },
+    {
+      "id": 4,
+      "userId": 4,
+      "description": "My computer is making strange noises.",
+      "status": "Open",
+      "createdAt": "2025-03-11T17:00:00Z"
+    },
+    {
+      "id": 5,
+      "userId": 5,
+      "description": "The software update caused an error.",
+      "status": "In Progress",
+      "createdAt": "2025-03-11T18:15:00Z"
+    }
+  ]
+  

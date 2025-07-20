@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "npx cypress run",
-    "test:smoke": "npx cypress run --env grep='@smoke'",
-    "test:regression": "npx cypress run --env grep='@regression'"
+    "test:smoke": "npx cypress run --env grepTags='@smoke'",
+    "test:regression": "npx cypress run --env grepTags='@regression'"
   },
   "repository": {
     "type": "git",

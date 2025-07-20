@@ -27,7 +27,7 @@ jobs:
           record: false
 
   regression-tests:
-    #needs: smoke-tests
+    needs: smoke-tests 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

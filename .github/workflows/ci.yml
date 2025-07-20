@@ -27,8 +27,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: node server.js &
-          wait-on: 'http://localhost:3000'
-          wait-on-timeout: 15
           command: npm run test:smoke
           record: false
 
@@ -56,8 +54,6 @@ jobs:
         with:
           start: node server.js &
           # Ensure the application is running before Cypress tests (for 15 seconds)
-          wait-on: 'http://localhost:3000'
-          wait-on-timeout: 15
           command: npm run test:regression
           record: false
 

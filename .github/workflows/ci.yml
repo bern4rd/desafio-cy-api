@@ -1,0 +1,59 @@
+name: CI - Helpdesk API Tests
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  smoke-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress Smoke Tests
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm start
+          # Assuming the application is running on port 3000
+          wait-on: 'http://localhost:3000'
+          command: npm run test:smoke
+          record: false
+
+  regression-tests:
+    needs: smoke-tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress Regression Tests
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          command: npm run test:regression
+          record: false
+
+      - name: Upload Test Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: mochawesome-test-reports
+          path: cypress/reports/html

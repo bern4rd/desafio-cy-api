@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "cy:run:headless": "cypress run --headless"
+    "start": "node server.js",
+    "test": "npx cypress run",
+    "test:smoke": "npx cypress run --env grep='@smoke'",
+    "test:regression": "npx cypress run --env grep='@regression'"
   },
   "repository": {
     "type": "git",

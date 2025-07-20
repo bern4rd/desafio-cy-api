@@ -19,10 +19,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Run the application in the background
-      # - name: Start the application
-      #   run: node server.js &
-
       - name: Run Cypress Smoke Tests
         uses: cypress-io/github-action@v6
         with:
@@ -31,7 +27,7 @@ jobs:
           record: false
 
   regression-tests:
-    needs: smoke-tests
+    #needs: smoke-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -45,15 +41,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # Run the application in the background
-      # - name: Start the application
-      #   run: node server.js &
-
       - name: Run Cypress Regression Tests
         uses: cypress-io/github-action@v6
         with:
           start: node server.js &
-          # Ensure the application is running before Cypress tests (for 15 seconds)
           command: npm run test:regression
           record: false
 

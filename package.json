@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/bern4rd/desafio-cy-api#readme",
   "devDependencies": {
+    "express": "^4.21.2",
     "cypress": "^14.5.2",
     "@cypress/grep": "^4.1.0",
     "ajv": "^8.17.1",

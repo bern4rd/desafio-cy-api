@@ -27,6 +27,7 @@ Before you begin, ensure you have the following installed on your machine:
 * [Node.js](https://nodejs.org/en/) (v18.x or higher recommended)
 * [npm](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
+* [Mock API server](https://github.com/automacaohml/helpdesk-api) running on `http://localhost:3000`
 
 ## Getting Started
 
@@ -48,9 +49,18 @@ Before you begin, ensure you have the following installed on your machine:
     npx cypress open
     ```
 
+    or 
+    ```bash
+    npm run cy:open
+    ```
+
 2.  **Headless Mode**
     ```bash
     npx cypress run
+    ```
+    or 
+    ```bash
+    npm run cy:run
     ```
 
 3.  **Running Tests with Tags: **

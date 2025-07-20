@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/bern4rd/desafio-cy-api#readme",
   "devDependencies": {
+    "cypress": "^14.5.2",
     "@cypress/grep": "^4.1.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
-    "cypress": "^14.5.2",
     "cypress-mochawesome-reporter": "^4.0.0",
     "cypress-plugin-api": "^2.11.2",
     "mocha": "^11.7.1",

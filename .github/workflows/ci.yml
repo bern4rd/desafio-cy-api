@@ -33,7 +33,7 @@ jobs:
       - name: Run Cypress Smoke Tests
         uses: cypress-io/github-action@v6
         with:
-          start: node server.js
+          start: node server.js &
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 10
           command: npm run test:smoke
@@ -63,7 +63,7 @@ jobs:
       - name: Run Cypress Regression Tests
         uses: cypress-io/github-action@v6
         with:
-          start: node server.js
+          start: node server.js &
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 10
           command: npm run test:regression

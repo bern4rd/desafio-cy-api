@@ -4,8 +4,15 @@
 
 This repository contains the automated API tests for the Helpdesk API for the capgemini chalenge, developed using Cypress.
 
+## Test Design
+
+The tests are planned using VADER heuristics and are represented in the Mindmap below.
+
+![Mindmap](docs/[Backend]%20-%20HelpDesk%20-%20Cenários%20de%20teste.png)
+
 ## Table of Contents
 - [Helpdesk API - Test Automation Project](#helpdesk-api---test-automation-project)
+  - [Test Design](#test-design)
   - [Table of Contents](#table-of-contents)
   - [Tech Stack](#tech-stack)
   - [Prerequisites](#prerequisites)
